@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fernando Gallego - Portafolio</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#repositorios">Repositorios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <h1>Fernando Gallego Donoso</h1>
+        <p>Investigador en inteligencia artificial y procesamiento del lenguaje natural</p>
+    </section>
+
+    <section id="repositorios">
+        <h2>Repositorios</h2>
+        <input type="text" id="search" placeholder="Buscar repositorios..." onkeyup="filterRepos()">
+
+        <table id="reposTable">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Tecnologías</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="https://github.com/FernandoGD97/KnowledgeGraph">KnowledgeGraph</a></td>
+                    <td>Grafo de conocimiento basado en SNOMED-CT</td>
+                    <td>
+                        <span class="tag python">Python</span>
+                        <span class="tag nlp">NLP</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://github.com/FernandoGD97/AnnotationTool">AnnotationTool</a></td>
+                    <td>Herramienta web para anotación clínica</td>
+                    <td>
+                        <span class="tag flask">Flask</span>
+                        <span class="tag mongodb">MongoDB</span>
+                        <span class="tag javascript">JavaScript</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://github.com/FernandoGD97/NER-ClinicalText">NER-ClinicalText</a></td>
+                    <td>Modelo NER para entidades médicas en español</td>
+                    <td>
+                        <span class="tag huggingface">Hugging Face</span>
+                        <span class="tag tensorflow">TensorFlow</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Puedes contactarme a través de:</p>
+        <ul>
+            <li><a href="mailto:fgallegodonoso@gmail.com">Correo: fgallegodonoso@gmail.com</a></li>
+            <li><a href="https://github.com/FernandoGD97">GitHub</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Fernando Gallego Donoso</p>
+    </footer>
+
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>

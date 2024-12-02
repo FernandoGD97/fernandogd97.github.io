@@ -1,0 +1,103 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header li {
+    margin: 0 15px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Inicio */
+#inicio {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: #f4f4f4;
+}
+
+/* Repositorios */
+#repositorios {
+    padding: 2rem;
+    text-align: center;
+}
+
+#search {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+th, td {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #f4f4f4;
+}
+
+.tag {
+    display: inline-block;
+    padding: 0.3rem 0.5rem;
+    margin: 0.2rem;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+.tag.python { background: #3572A5; }
+.tag.nlp { background: #28A745; }
+.tag.flask { background: #6A1B9A; }
+.tag.mongodb { background: #4CAF50; }
+.tag.javascript { background: #F0DB4F; }
+.tag.huggingface { background: #FF9900; }
+.tag.tensorflow { background: #FF6F00; }
+
+/* Contacto */
+#contacto ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contacto li {
+    margin: 10px 0;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
