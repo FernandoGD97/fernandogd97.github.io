@@ -10,22 +10,17 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#repositorios">Repositorios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="javascript:void(0)" onclick="toggleSection('repositorios')">Repositorios</a></li>
+                <li><a href="javascript:void(0)" onclick="toggleSection('experiencia')">Experiencia Laboral</a></li>
+                <li><a href="javascript:void(0)" onclick="toggleSection('publicaciones')">Publicaciones</a></li>
+                <li><a href="javascript:void(0)" onclick="toggleSection('otras-menciones')">Otras Menciones</a></li>
             </ul>
         </nav>
     </header>
-
-    <section id="inicio">
-        <h1>Fernando Gallego Donoso</h1>
-        <p>Investigador en inteligencia artificial y procesamiento del lenguaje natural</p>
-    </section>
-
-    <section id="repositorios">
+    
+    <section id="repositorios" class="section hidden">
         <h2>Repositorios</h2>
         <input type="text" id="search" placeholder="Buscar repositorios..." onkeyup="filterRepos()">
-
         <table id="reposTable">
             <thead>
                 <tr>
@@ -43,35 +38,28 @@
                         <span class="tag nlp">NLP</span>
                     </td>
                 </tr>
-                <tr>
-                    <td><a href="https://github.com/FernandoGD97/AnnotationTool">AnnotationTool</a></td>
-                    <td>Herramienta web para anotación clínica</td>
-                    <td>
-                        <span class="tag flask">Flask</span>
-                        <span class="tag mongodb">MongoDB</span>
-                        <span class="tag javascript">JavaScript</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="https://github.com/FernandoGD97/NER-ClinicalText">NER-ClinicalText</a></td>
-                    <td>Modelo NER para entidades médicas en español</td>
-                    <td>
-                        <span class="tag huggingface">Hugging Face</span>
-                        <span class="tag tensorflow">TensorFlow</span>
-                    </td>
-                </tr>
             </tbody>
         </table>
     </section>
-
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>Puedes contactarme a través de:</p>
+    
+    <section id="experiencia" class="section hidden">
+        <h2>Experiencia Laboral</h2>
+        <p>Lista de tu experiencia profesional...</p>
+    </section>
+    
+    <section id="publicaciones" class="section hidden">
+        <h2>Publicaciones</h2>
         <ul>
-            <li><a href="mailto:fgallegodonoso@gmail.com">Correo: fgallegodonoso@gmail.com</a></li>
-            <li><a href="https://github.com/FernandoGD97">GitHub</a></li>
+            <li><a href="https://link.springer.com/chapter/10.1007/978-3-031-63775-9_19">ClinLinker</a></li>
+            <li><a href="https://arxiv.org/pdf/2407.06292">Hybrid X-Linker</a></li>
         </ul>
     </section>
+    
+    <section id="otras-menciones" class="section hidden">
+        <h2>Otras Menciones</h2>
+        <p>Contenido adicional que quieras destacar...</p>
+    </section>
+    
 
     <footer>
         <p>&copy; 2024 Fernando Gallego Donoso</p>

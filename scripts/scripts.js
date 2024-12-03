@@ -1,5 +1,18 @@
 // scripts.js
 
+// Alternar la visibilidad de una sección
+function toggleSection(sectionId) {
+    const section = document.getElementById(sectionId);
+
+    if (section.classList.contains('hidden')) {
+        section.classList.remove('hidden');
+        section.classList.add('visible');
+    } else {
+        section.classList.remove('visible');
+        section.classList.add('hidden');
+    }
+}
+
 // Filtrar repositorios en la tabla
 function filterRepos() {
     const searchInput = document.getElementById("search").value.toLowerCase();
