@@ -1,68 +1,144 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fernando Gallego - Portafolio</title>
+    <title>Fernando Gallego - Portfolio</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="javascript:void(0)" onclick="toggleSection('repositorios')">Repositorios</a></li>
-                <li><a href="javascript:void(0)" onclick="toggleSection('experiencia')">Experiencia Laboral</a></li>
-                <li><a href="javascript:void(0)" onclick="toggleSection('publicaciones')">Publicaciones</a></li>
-                <li><a href="javascript:void(0)" onclick="toggleSection('otras-menciones')">Otras Menciones</a></li>
+                <li><a href="javascript:void(0)" onclick="toggleSection('education')">Education</a></li>
+                <li><a href="javascript:void(0)" onclick="toggleSection('publications')">Publications</a></li>
+                <li><a href="javascript:void(0)" onclick="toggleSection('work-experience')">Work Experience</a></li>
+                <li><a href="javascript:void(0)" onclick="toggleSection('repositories')">Repositories</a></li>
+                <li><a href="javascript:void(0)" onclick="toggleSection('other-mentions')">Other Mentions</a></li>
             </ul>
         </nav>
     </header>
+
+
+    <section id="index">
+        <h1>Fernando Gallego Donoso</h1>
+        <img src="pics/profile.jpg" alt="Fernando Gallego's Profile Picture">
+        <p>Fernando Gallego Donoso is a Ph.D. candidate at the University of Málaga and a member of the Computational Intelligence in Biomedicine (ICB) research group. Graduated in Software Engineering and holding a Master's degree in Computer Engineering with a specialization in Data Science from the same university, he has dedicated his research career since 2020 to leveraging artificial intelligence to solve real-world problems. His doctoral thesis focuses on ensuring the energy flexibility of smart grids through AI-driven solutions.</p>
+        <p>In recent years, he has shifted his research towards natural language processing, particularly in the context of biomedical language, both in Spanish and other under-resourced languages. Currently, his main research line focuses on extracting information from electronic health records. He employs advanced natural language processing techniques, such as the recognition and linking of medical entities to international standards, aiming to improve decision-making in the medical field. His work has contributed to the development of innovative methods for semantic normalization and contextual disambiguation, tackling multilingual challenges and optimizing the integration of these technologies into the healthcare sector.</p>
+    </section>
+
+    <section id="education" class="section hidden">
+        <h2>Education</h2>
+        <ul id="educationList">
+            <li><strong>Ph.D. Candidate in Artificial Intelligence</strong> - (2020 - Present) - <em>University of Málaga</em></li>
+            <li><strong>Master's Degree in Computer Engineering (Data Science)</strong> - (2019 - 2021) - <em>University of Málaga</em></li>
+            <li><strong>Bachelor's Degree in Software Engineering</strong> - (2015 - 2019) - <em>University of Málaga</em></li>
+            <li><strong>High School Diploma in Science and Technology</strong> - (2013 - 2015) - <em>IES Emilio Prados</em></li>
+        </ul>
     
-    <section id="repositorios" class="section hidden">
-        <h2>Repositorios</h2>
-        <input type="text" id="search" placeholder="Buscar repositorios..." onkeyup="filterRepos()">
+        <h3>Courses</h3>
+        <ul id="coursesList">
+            <li><strong>Deep Neural Networks with PyTorch (with honors)</strong> (35 hours) - 2023 - <em>Coursera</em> </li>
+            <li><strong>Fundamentos de SNOMED CT</strong> (8 hours) - 2023 - <em>SNOMED-CT E-learning</em></li>
+            <li><strong>Fundamentos del Aprendizaje Profundo para la Visión por Computador</strong> (8 hours) - 2019 - <em>Nvidia Deep Learning Institute</em></li>
+            <li><strong>Fundamentos de la Computación Acelerada con CUDA C/C++</strong> (8 hours) - 2019 - <em>Nvidia Deep Learning Institute</em></li>
+            <li><strong>Fundamentos de la Computación Acelerada con CUDA Python</strong> (8 hours) - 2019 - <em>Nvidia Deep Learning Institute</em></li>
+            <li><strong>Curso avanzado de GPUs. Programación CUDA</strong> (60 hours) - 2017 - <em>University of Málaga</em></li>
+            <li><strong>Curso de Montaje y Configuración del PC</strong> (60 hours) - 2017 - <em>University of Málaga</em></li>
+            <li><strong>Machine Learning</strong> (55 hours) - 2017 - <em>Stanford University via Coursera</em></li>
+        </ul>
+    </section>
+    
+    <section id="publications" class="section hidden">
+        <h2>Publications</h2>
+    
+        <h3>Journal Articles</h3>
+        <ul id="journalPublications"></ul>
+    
+        <h3>Conference Papers</h3>
+        <ul id="conferencePublications"></ul>
+
+        <h3>Others</h3>
+        <ul id="otherPublications"></ul>
+    </section>
+
+    <section id="work-experience" class="section hidden">
+        <h2>Work Experience</h2>
+        <ul id="experienceList">
+            <li><strong>Research Assistant</strong> - (June 2020 - Present) - <em>University of Málaga</em></li>
+            <li><strong>IT Technician</strong> - (November 2019 - March 2020) - <em>Malaga Aerospace, Defense & Electronics Systems</em></li>
+            <li><strong>Research Assistant</strong> - (February 2019 - June 2019) - <em>University of Málaga</em></li>
+            <li><strong>IT Technician</strong> - (June 2018 - January 2019) - <em>Solelec Ibérica S.L.</em></li>
+        </ul>
+    </section>
+    
+    <section id="repositories" class="section hidden">
+        <h2>Repositories</h2>
+        <input type="text" id="search" placeholder="Search repositories..." onkeyup="filterRepos()">
         <table id="reposTable">
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Descripción</th>
-                    <th>Tecnologías</th>
-                </tr>
-            </thead>
             <tbody>
                 <tr>
-                    <td><a href="https://github.com/FernandoGD97/KnowledgeGraph">KnowledgeGraph</a></td>
-                    <td>Grafo de conocimiento basado en SNOMED-CT</td>
+                    <td><a href="https://github.com/ertis-research/ActiveNetworkManagementMAS">ActiveNetworkManagementMAS</a></td>
+                    <td><strong> Maintaining flexibility in smart grid consumption through deep learning and deep reinforcement learning</strong></td>
+                    <td>
+                        <span class="tag python">Python</span>
+                        <span class="tag tensorflow">TensorFlow</span>
+                        <span class="tag deep-learning">Deep Learning</span>
+                        <span class="tag deep-reinforcement-learning">Deep Reinforcement Learning</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://github.com/ICB-UMA/WNT-Softmax">WNT-Softmax</a></td>
+                    <td><strong> Recognition and normalization of multilingual symptom entities using in-domain-adapted BERT models and classification layers</strong></td>
+                    <td>
+                        <span class="tag python">Python</span>
+                        <span class="tag pytorch">PyTorch</span>
+                        <span class="tag nlp">NLP</span>
+                        <span class="tag bi-encoder">Bi-encoder</span>
+                        <span class="tag multilingual">Multilingual</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://github.com/ICB-UMA/ClinLinker-KB">ClinLinker-KB</a></td>
+                    <td><strong> Representation LLMs with Knowledge Graph Integration for Clinical Entity Normalization in Spanish </strong><em>(under review)</em></td>
                     <td>
                         <span class="tag python">Python</span>
                         <span class="tag nlp">NLP</span>
+                        <span class="tag pytorch">PyTorch</span>
+                        <span class="tag sapbert">SapBERT</span>
+                        <span class="tag bi-encoder">Bi-encoder</span>
+                        <span class="tag knowledge-graph">Knowledge Graph</span>
+                        <span class="tag knowledge-bases">Knowledge Bases</span>
+                        <span class="tag umls">UMLS</span>
+                        <span class="tag snomed-ct">SNOMED-CT</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://github.com/ICB-UMA/KnowledgeGraph">KnowledgeGraph</a></td>
+                    <td><strong>Enhancing Cross-Encoders using Knowledge Graph Hierarchy for Medical Entity Linking in Zero- and Few-Shot Scenarios </strong><em>(under review)</em></td>
+                    <td>
+                        <span class="tag python">Python</span>
+                        <span class="tag nlp">NLP</span>
+                        <span class="tag pytorch">PyTorch</span>
+                        <span class="tag sapbert">SapBERT</span>
+                        <span class="tag cross-encoder">Cross-encoder</span>
+                        <span class="tag knowledge-graph">Knowledge Graph</span>
+                        <span class="tag knowledge-bases">Knowledge Bases</span>
+                        <span class="tag umls">UMLS</span>
+                        <span class="tag snomed-ct">SNOMED-CT</span>
                     </td>
                 </tr>
             </tbody>
         </table>
     </section>
     
-    <section id="experiencia" class="section hidden">
-        <h2>Experiencia Laboral</h2>
-        <p>Lista de tu experiencia profesional...</p>
-    </section>
-    
-    <section id="publicaciones" class="section hidden">
-        <h2>Publicaciones</h2>
-        <ul>
-            <li><a href="https://link.springer.com/chapter/10.1007/978-3-031-63775-9_19">ClinLinker</a></li>
-            <li><a href="https://arxiv.org/pdf/2407.06292">Hybrid X-Linker</a></li>
-        </ul>
-    </section>
-    
-    <section id="otras-menciones" class="section hidden">
-        <h2>Otras Menciones</h2>
-        <p>Contenido adicional que quieras destacar...</p>
-    </section>
-    
 
     <footer>
-        <p>&copy; 2024 Fernando Gallego Donoso</p>
+        <div class="footer-contacts">
+            <span>&copy; 2024 Fernando Gallego Donoso</span>
+            <span>📧 fgallegodonoso@uma.es (Organization Email)</span>
+            <span>📧 fgallegodonoso@gmail.com (Personal Email)</span>
+        </div>
     </footer>
 
     <script src="scripts/scripts.js"></script>

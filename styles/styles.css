@@ -1,4 +1,3 @@
-/* General */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -30,18 +29,143 @@ header a {
     text-decoration: none;
 }
 
-/* Inicio */
-#inicio {
-    text-align: center;
-    padding: 3rem 1rem;
-    background: #f4f4f4;
+#index h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    max-width: 800px; 
+    margin: auto;
+    text-align: center; 
+}
+#index img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
+    margin: 20px 0; 
+}
+#index p {
+    text-align: justify; 
+    margin-bottom: 15px; 
+    font-size: 16px;
+    line-height: 1.6; 
 }
 
-/* Repositorios */
-#repositorios {
-    padding: 2rem;
-    text-align: center;
+#repositories  input[type="text"] {
+    width: 80%;
+    max-width: 500px;
+    margin: 10px auto;
+    display: block; 
+    text-align: left;
 }
+
+#publications {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: left;
+}
+
+#publications h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#publications h3 {
+    text-align: left;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+#publicationsList {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+    text-align: left;
+
+}
+
+#publicationsList li {
+    margin-bottom: 15px; 
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: left;
+
+}
+
+#publicationsList strong {
+    font-weight: bold; 
+}
+
+#publicationsList em {
+    font-style: italic; 
+}
+
+#work-experience h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#experienceList {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+#experienceList li {
+    margin-bottom: 15px; 
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#experienceList li strong {
+    font-weight: bold; 
+}
+
+#experienceList li em {
+    font-style: italic; 
+}
+
+#education h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#education h3 {
+    text-align: left;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+#educationList, #coursesList {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+    text-align: left; 
+}
+
+#educationList li, #coursesList li {
+    margin-bottom: 15px; 
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#educationList li strong, #coursesList li strong {
+    font-weight: bold; 
+}
+
+#educationList li em, #coursesList li em {
+    font-style: italic;
+}
+
 
 #search {
     margin-bottom: 1rem;
@@ -52,40 +176,50 @@ header a {
     border-radius: 5px;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1rem 0;
-}
 
-th, td {
-    padding: 1rem;
-    border: 1px solid #ddd;
+#reposTable {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
     text-align: left;
 }
 
-th {
-    background: #f4f4f4;
+#reposTable tr {
+    border-bottom: 1px solid #ddd;
+}
+
+#reposTable td {
+    padding: 10px;
+    vertical-align: top;
 }
 
 .tag {
     display: inline-block;
-    padding: 0.3rem 0.5rem;
-    margin: 0.2rem;
+    margin: 5px 5px 0 0;
+    padding: 5px 10px;
+    background-color: #f4f4f4;
     border-radius: 5px;
-    color: #fff;
-    font-size: 0.8rem;
+    font-size: 12px;
+    color: #333;
+    text-transform: capitalize;
 }
 
-.tag.python { background: #3572A5; }
-.tag.nlp { background: #28A745; }
-.tag.flask { background: #6A1B9A; }
-.tag.mongodb { background: #4CAF50; }
-.tag.javascript { background: #F0DB4F; }
-.tag.huggingface { background: #FF9900; }
-.tag.tensorflow { background: #FF6F00; }
+.tag.python { background-color: #3572A5; color: #fff; }
+.tag.tensorflow { background-color: #FF6F00; color: #fff; }
+.tag.deep-learning { background-color: #4CAF50; color: #fff; }
+.tag.deep-reinforcement-learning { background-color: #673AB7; color: #fff; }
+.tag.pytorch { background-color: #EE4C2C; color: #fff; }
+.tag.nlp { background-color: #FFC107; color: #333; }
+.tag.multilingual { background-color: #607D8B; color: #fff; }
+.tag.sapbert { background-color: #9C27B0; color: #fff; }
+.tag.bi-encoder { background-color: #8BC34A; color: #fff; }
+.tag.cross-encoder { background-color: #FF9800; color: #fff; }
+.tag.knowledge-graph { background-color: #795548; color: #fff; }
+.tag.knowledge-bases { background-color: #009688; color: #fff; }
+.tag.umls { background-color: #E91E63; color: #fff; }
+.tag.snomed-ct { background-color: #2196F3; color: #fff; }
 
-/* Contacto */
 #contacto ul {
     list-style: none;
     padding: 0;
@@ -109,3 +243,28 @@ footer {
 .section.visible {
     display: block;
 }
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff; 
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.footer-contacts {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+    font-size: 16px; 
+}
+
+.footer-contacts span {
+    display: inline-flex;
+    align-items: center; 
+    gap: 8px;
+}
+
+
+
