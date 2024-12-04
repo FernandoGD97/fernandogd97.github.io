@@ -131,6 +131,16 @@ function closeMenuOnSelection() {
     }
 }
 
+function adjustBodyPadding() {
+    const footer = document.querySelector('footer');
+    const footerHeight = footer.offsetHeight;
+    document.body.style.paddingBottom = `${footerHeight}px`;
+}
+
+window.addEventListener('load', adjustBodyPadding);
+
+window.addEventListener('resize', adjustBodyPadding);
+
 document.querySelectorAll(".nav-menu a").forEach(link => {
     link.addEventListener("click", closeMenuOnSelection);
 });

@@ -3,12 +3,7 @@ body {
     margin: 0;
     line-height: 1.6;
     padding-top: 60px;
-    padding-bottom: calc(var(--footer-height) + 40px);
     box-sizing: border-box;
-}
-
-:root {
-    --footer-height: 100px;
 }
 
 header {
@@ -52,12 +47,11 @@ section {
     justify-content: flex-start;
     align-items: center; 
     width: 100%;
-    max-width: 800px; 
-    margin: 20px auto;
-    padding: 20px;
+    max-width: 1000px; 
+    margin: auto;
     text-align: center;
     overflow: visible;
-    height: auto; 
+    height: auto;
 }
 #index img {
     width: 150px;
@@ -67,13 +61,12 @@ section {
 }
 #index p {
     text-align: justify; 
-    margin-bottom: 15px; 
     font-size: 16px;
     line-height: 1.6; 
 }
 
 #repositories  input[type="text"] {
-    width: 80%;
+    width: 85%;
     max-width: 500px;
     margin: 10px auto;
     display: block; 
@@ -81,15 +74,11 @@ section {
 }
 
 #publications {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px 0;
+    margin: auto;
     text-align: left;
 }
 
 #publications ul li {
-    margin-left: 40px;
-    margin-bottom: 20px;
     line-height: 1.6; 
     font-size: 16px; 
 }
@@ -97,25 +86,20 @@ section {
 #publications h2 {
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 20px;
 }
 
 #publications h3 {
     text-align: left;
     font-size: 1.5rem;
-    margin: 20px 0 15px 30px;
 }
 
 #publicationsList {
     list-style-type: none; 
-    margin: 0;
-    padding: 0;
     text-align: left;
 
 }
 
 #publicationsList li {
-    margin-bottom: 15px; 
     font-size: 16px;
     line-height: 1.6;
     text-align: left;
@@ -166,18 +150,15 @@ section {
 #education h3 {
     text-align: left;
     font-size: 1.5rem;
-    margin-bottom: 15px;
 }
 
 #educationList, #coursesList {
     list-style-type: none; 
-    margin: 0;
-    padding: 0;
     text-align: left; 
 }
 
 #educationList li, #coursesList li {
-    margin-bottom: 15px; 
+    margin-bottom: 10px; 
     font-size: 16px;
     line-height: 1.6;
 }
@@ -194,7 +175,6 @@ section {
 #search {
     margin-bottom: 1rem;
     padding: 0.5rem;
-    width: 80%;
     max-width: 400px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -207,7 +187,6 @@ section {
     display: block;
     border-collapse: collapse;
     text-align: left;
-    margin-bottom: 20px;
 }
 
 #reposTable tr {
@@ -259,13 +238,14 @@ footer {
     position: fixed;
     left: 0;
     bottom: 0;
+    margin-top: 200px;
     background: #333;
     color: #fff;
     text-align: center;
     padding: 15px 0;
     font-size: 14px;
     width: 100%;
-    overflow: visible
+    overflow: visible;
 }
 
 .section.hidden {
@@ -286,7 +266,7 @@ footer {
     overflow-wrap: break-word;
     word-wrap: break-word;
     max-width: 85%;
-    margin: 0 auto; 
+    margin: auto; 
 }
 
 .footer-contacts span {
@@ -391,6 +371,7 @@ nav {
         padding: 8px;
     }
     footer {
+        margin-top: 0px;
         padding: 10px 15px; 
     }
     .footer-contacts {
