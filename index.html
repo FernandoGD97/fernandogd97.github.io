@@ -2,22 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Fernando Gallego - Portfolio</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="javascript:void(0)" onclick="toggleSection('education')">Education</a></li>
-                <li><a href="javascript:void(0)" onclick="toggleSection('publications')">Publications</a></li>
-                <li><a href="javascript:void(0)" onclick="toggleSection('work-experience')">Work Experience</a></li>
-                <li><a href="javascript:void(0)" onclick="toggleSection('repositories')">Repositories</a></li>
-                <li><a href="javascript:void(0)" onclick="toggleSection('other-mentions')">Other Mentions</a></li>
-            </ul>
+            <div class="nav-container">
+                <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+                <ul class="nav-menu">
+                    <li><a href="javascript:void(0)" onclick="toggleSection('education')">Education</a></li>
+                    <li><a href="javascript:void(0)" onclick="toggleSection('publications')">Publications</a></li>
+                    <li><a href="javascript:void(0)" onclick="toggleSection('work-experience')">Work Experience</a></li>
+                    <li><a href="javascript:void(0)" onclick="toggleSection('repositories')">Repositories</a></li>
+                    <li><a href="javascript:void(0)" onclick="toggleSection('other-mentions')">Other Mentions</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
+    
 
 
     <section id="index">
@@ -140,7 +144,6 @@
             <span>📧 fgallegodonoso@uma.es (Organization Email)</span>
             <span>📧 fgallegodonoso@gmail.com (Personal Email)</span>
             <span>🔗 <a href="https://www.linkedin.com/in/fernando-gallego-donoso-948515151/" target="_blank">LinkedIn</a></span>
-
         </div>
     </footer>
 

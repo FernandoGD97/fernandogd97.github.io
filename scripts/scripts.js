@@ -119,4 +119,19 @@ function renderPublications() {
     });
 }
 
+function toggleMenu() {
+    const navMenu = document.querySelector(".nav-menu");
+    navMenu.classList.toggle("active");
+}
+
+function closeMenuOnSelection() {
+    const navMenu = document.querySelector(".nav-menu");
+    if (navMenu.classList.contains("active")) {
+        navMenu.classList.remove("active");
+    }
+}
+
+document.querySelectorAll(".nav-menu a").forEach(link => {
+    link.addEventListener("click", closeMenuOnSelection);
+});
 document.addEventListener("DOMContentLoaded", renderPublications);
