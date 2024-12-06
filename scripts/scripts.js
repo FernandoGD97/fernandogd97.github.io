@@ -11,6 +11,9 @@ function toggleSection(sectionId) {
     if (selectedSection) {
         selectedSection.classList.remove("hidden");
         selectedSection.classList.add("visible");
+        if (sectionId === "other-mentions") {
+            collapseAllMentions();
+        }
     }
 }
 
@@ -136,6 +139,27 @@ function adjustBodyPadding() {
     const footerHeight = footer.offsetHeight;
     document.body.style.paddingBottom = `${footerHeight}px`;
 }
+
+function collapseAllMentions() {
+    const mentions = document.querySelectorAll(".mention-content");
+    mentions.forEach(content => {
+        content.style.display = "none"; 
+    });
+}
+
+function toggleContent(button) {
+    const content = button.nextElementSibling; 
+    const isExpanded = content.style.display === "block";
+
+    document.querySelectorAll(".mention-content").forEach((el) => {
+        el.style.display = "none";
+    });
+
+    if (!isExpanded) {
+        content.style.display = "block";
+    }
+}
+
 
 window.addEventListener('load', adjustBodyPadding);
 
